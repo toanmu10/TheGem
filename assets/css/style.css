@@ -800,7 +800,7 @@ ul{
     transform:translateX(-395px);
     margin-top: 7px;
 }
-.content-product--interested-in-title:after{
+.content-product--interested-in-title::after{
     content: "";
     width: 350px;
     height:1px;
@@ -849,7 +849,7 @@ footer{
 .footer_social-network ul li:not(:last-child){
     margin-right: 15px;
 }
-.footer_help ul li:not(:last-child):after{
+.footer_help ul li:not(:last-child)::after{
     content: "";
     width:1px;
     height:15px;
