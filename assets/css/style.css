@@ -255,6 +255,7 @@ ul{
     width: 100%;
 }
 
+
 .product-img--primary {
 
     background-color: var(--primary-background);
@@ -698,12 +699,14 @@ ul{
     font-size: 14px;
 }
 
-.product-structure img{
-    width: 100%;
-    margin-right: 120px;
-}
 .product-structure{
     position: relative;
+    height:600px;
+    width: 100%;
+    background-image: url(../img/bg.png) ;
+    background-position-x: center;
+    background-size: cover;
+
 }
 .product-color,.product-design,.product-material{
     display: flex;
