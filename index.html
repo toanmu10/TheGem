@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gem</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -63,7 +64,7 @@
                         <img class="img-logo" src ="./assets/img/logo.png"><p>THEGEM</p>
                     </div>
                     <div class="header__menu-nav uppercase-text ">
-                        <ul>
+                        <ul class="header__menu-nav--ul">
                             <li>home</li>
                             <li>page</li>
                             <li>blog</li>
@@ -71,10 +72,18 @@
                             <li>shop</li>
                             <li>features</li>
                             <li>elemrnts</li>
+                            
                         </ul>
+                        <div class="btn-menu">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        
                     </div>
 
                     <div class="header__menu-other">
+                        <div class="btn-other-menu">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
                         <ul>
                             <li><img class="img-flag" src="./assets/img/flag.png" alt=""></li>
                             <li><i class="fas fa-search"></i></li>
@@ -87,7 +96,7 @@
             </div>
 
             <!-- slider -->
-            <div class="header__slider-container">
+            <!-- <div class="header__slider-container">
                 <div class="header__slider">
                     <div class="header__slider-logo">
                         <img src="./assets/img/slide-logo.png" alt="" class="img-bg">
@@ -110,9 +119,32 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
+        <!-- <div class="header__slider-container"> -->
+            <div class="header__slider">
+                <div class="header__slider-logo">
+                    <img src="./assets/img/slide-logo.png" alt="" class="img-bg">
+                    <!-- <img src="./assets/img/index.html.png" alt="" class="img-icon"> -->
+                </div>
 
+                <div class="header__slider-title uppercase-text">
+                    <h3>exclusive <span>shoes</span></h3>
+                </div>
+                <div class="header__slider-description">Lorem ipsum dolor sit amet,consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit </div>
+                <div class="header__slider-tab">
+                    <ul>
+                        <li>Home</li>
+                        <li><i class="fas fa-arrow-right"></i></li>
+                        <li>Breadcrumbs Example</li>
+                        <li><i class="fas fa-arrow-right"></i></li>
+                        <li>Second Level</li>
+                        <li><i class="fas fa-arrow-right"></i></li>
+                        <li>Third Level</li>
+                    </ul>
+                </div>
+            </div>
+        <!-- </div> -->
     
         <!-- content -->
         <div class="content">
@@ -120,6 +152,7 @@
                 <div class="content__product-info">
                     <div class="product-img">
                         <div class="product-img--primary">
+                            
                             <div class="primary-button">
                                 <button class="btn btn-left"><i class="fas fa-chevron-left"></i></button>
                                 <button class="btn btn-right"><i class="fas fa-chevron-right"></i></button>
@@ -397,5 +430,33 @@
             </div>
         </footer>
     </div>
+    <script>
+   
+        // var header__menu = document.getElementsByClassName('header__menu-nav');
+        var mobile_menu = document.querySelector('.btn-menu');
+        var header_menu = document.querySelector('.header__menu-nav')
+
+        mobile_menu.onclick = function(){
+            if(header_menu.classList.contains('active')){
+                header_menu.classList.remove('active');
+            }
+            else{
+                header_menu.classList.add('active');
+
+            }
+        }  
+        var header_menu_other = document.querySelector('.header__menu-other')
+        var other_menu = document.querySelector('.btn-other-menu')
+        other_menu.onclick = function(){
+            if(header_menu_other.classList.contains('active')){
+                header_menu_other.classList.remove('active');
+            }
+            else{
+                header_menu_other.classList.add('active');
+
+            }
+        }
+
+    </script>
 </body>
 </html>

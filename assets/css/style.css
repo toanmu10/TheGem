@@ -19,6 +19,9 @@ html{
     margin: 0;
     box-sizing: border-box;
 }
+.active{
+    z-index: 1;
+}
 
 ul{
     list-style-type: none;
@@ -37,6 +40,9 @@ ul{
 }
 .uppercase-text{
     text-transform: uppercase;
+}
+.btn-menu, .btn-other-menu{
+    display:none;
 }
 .header__contact-phone{
     cursor: pointer;
@@ -63,6 +69,9 @@ ul{
     justify-content: space-between;
 }
 .header__contact-network ul li,.header__contact-options ul li{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
     margin: 0 10px;
     cursor: pointer;
 }
@@ -76,7 +85,7 @@ ul{
     margin-right: 5px;
     font-size: 8px;
     top: 50%;
-    transform: translateY(-20%);
+    transform: translateY(17%);
 }
 .btn-wishlist{
     padding: 6px 12px;
@@ -101,17 +110,20 @@ ul{
     max-width:1170px;
     margin-left: auto;
     margin-right: auto;
+    flex-wrap: wrap;
 }
 .header__menu-logo{
     display: flex;
     justify-content: space-around;
     cursor: pointer;
+
 }
 .header__menu-logo p{
     font-size:18px;
     font-weight:600;
     margin: 16px 0 0 5px;
 }
+
 .header__menu-nav ul,.header__menu-other ul{
     display: flex;
     justify-content: space-between  ;
@@ -122,6 +134,10 @@ ul{
     font-weight: bold;
     font-size:14px;
     cursor: pointer;
+    
+}
+.header__menu-nav ul li:first-child{
+    position: relative;
 }
 .header__menu-nav ul li:nth-child(5){
     border: 3px solid #000;
@@ -148,42 +164,54 @@ ul{
 
 
 /* Banner */
-.header__slider-container{
+/* .header__slider-container{
     background-color: var(--background-color);
     height:400px;
     position: relative;
     width: 100%;
-}
+} */
 .header__slider{
-    position: absolute;
-    transform:translateX(250px);
-    margin-top:15px;
+    /* position: absolute; */
+    /* margin-top:15px; */
+    /* width: 100%; */
+    /* margin-left: 20%; */
+    background-color: var(--background-color);
+    height:400px;
+    /* position: relative; */
+    width: 100%;
+    text-align: center;
 }
 .header__slider-logo .img-bg{
-    left: 47%;
+    /* left: 47%; */
     margin-top: 5%;
     position: relative;
+    /* text-align: center; */
+
 }
-.header__slider-logo .img-icon{
+/* .header__slider-logo .img-icon{
     position: absolute;
     margin-top: 7.7%;
     left: 49.25%;
-}
+} */
 .header__slider-title{
-    display: inline-block;
-    margin-left: 32%;
+    /* display: inline-block; */
+    /* margin-left: 37%; */
     margin-top: 30px;
     font-size:35px;
     color: #fff;
+    width:100%;
 }
 
-.header__slider-title span:first-child{
+.header__slider-title h3{
     font-weight: 800;
     margin-right: 10px;
+    /* width:100%; */
     letter-spacing: 2px;
+    text-align: center;
 }
-.header__slider-title span:last-child{
+.header__slider-title span{
     font-weight: 100;
+    /* width:100%; */
     color: rgb(212, 212, 212);
 }
 .header__slider-description{
@@ -191,12 +219,15 @@ ul{
     color: rgb(212, 212, 212);
     font-size:20px;
     font-weight: 100;
+    /* margin-left: 18%; */
+    
 }
 .header__slider-tab ul{
     display: flex;
     justify-content: center;
-    margin-top: 95px;
+    margin-top: 100px;
     font-size:14px;
+    width: 100%;
 }
 .header__slider-tab ul li{
     margin-right: 20px;
@@ -221,13 +252,19 @@ ul{
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
-.product-img--primary{
-    width:625px;
-    height:800px;
+
+.product-img--primary {
+
     background-color: var(--primary-background);
     position:relative;
     margin-right: 10px;
+    /* max-width: 100%; */
+    width: 625px;
+    /* height:auto; */
+    height: 700px;
+    z-index: -1;
 }
 
 .primary-button .btn-left{
@@ -519,7 +556,7 @@ ul{
 
 /* content product introduce */
 .content__product-intro{
-    width:1170px;
+    max-width:1170px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -638,7 +675,7 @@ ul{
 .content-product-structure{
     margin-left: auto;
     margin-right: auto;
-    width: 1170px;
+    max-width: 1170px;
 }
 .product-name{
     background-color: var(--primary-background);
@@ -649,6 +686,7 @@ ul{
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing:2px;
+    line-height: 1.1;
 }
 .product-name-title span{
     color: var(--gold-color);
@@ -819,8 +857,10 @@ footer{
 
 }
 .footer{
-    width: 1170px;
-    margin-left: 150px;
+    max-width: 1170px;
+    width: inherit;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content:space-between;
     background-color: #181828;
@@ -839,6 +879,7 @@ footer{
 .footer_help ul, .footer_social-network ul{
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
 
 }
 .footer_help ul li{
@@ -861,4 +902,5 @@ footer{
     font-size: 14px;
     cursor: pointer;
 }
+
 
