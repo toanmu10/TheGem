@@ -1,0 +1,83 @@
+
+@mixin btn{
+    font-size: 14px;
+    padding: 15px 20px;
+}
+@mixin mg-lr-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin display-flex-sb{
+    display: flex;
+    justify-content:space-between;
+}
+@mixin display-flex-fs{
+    display: flex;
+    justify-content:flex-start;
+}
+
+@mixin btn-lr{
+    background-color:gray;
+    position: absolute;
+    border:none;
+    cursor: pointer;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin pseudo{
+    content: "";
+    position: absolute;
+}
+@mixin btn-direction{
+    padding: 5px 15px;
+    font-size: $fs-13;
+    color: $normal-text;
+    background-color:#fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+@mixin btn-direction-icon{
+    font-size:10px;
+    transform: translateY(-1px);
+    margin-right: 10px;
+}
+@mixin product-icon{
+    border: 1px solid rgb(172, 169, 169);
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    padding: 0 10px;
+}
+@mixin product-icon-img{
+    width: 25px;
+    height: 25px;
+    transform: translateY(6px);
+    margin-left: -3px;
+}
+@mixin product-text-p{
+    font-size: 12px;
+    color: $normal-text;
+    font-weight: 300;
+    margin-top: 15px;
+}
+@mixin text-title{
+    .text-title{
+        width: 100%;
+        span:first-child{
+            font-size: 12px;
+            color: black;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        span:last-child {
+            font-size: 12px;
+            color: $normal-text;
+            font-weight: 300;
+        }
+    }
+}
+@mixin mgleft-product-text{
+    margin-left: 20px;
+}
