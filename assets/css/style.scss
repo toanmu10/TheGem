@@ -52,8 +52,7 @@ ul{
         padding: 8px 0;
         max-width: 1170px;
         width:inherit;
-        margin-left: auto;
-        margin-right: auto;
+        @include mg-lr-auto;
         .header__contact-network{
             ul{
                 @include display-flex-sb;
@@ -109,8 +108,7 @@ ul{
         align-items: center;
         width: inherit;
         max-width:1170px;
-        margin-left: auto;
-        margin-right: auto;
+        @include mg-lr-auto;
         flex-wrap: wrap;
         .header__menu-logo{
             display: flex;
@@ -209,7 +207,7 @@ ul{
         ul{
             display: flex;
             justify-content: center;
-            margin-top: 100px;
+            margin-top: 90px;
             font-size:14px;
             width: 100%;
             li{
@@ -292,12 +290,11 @@ ul{
                 position: relative;
             }
             .product-img--extra-item:nth-child(4)::before{
-                content: "";
+                @include pseudo;
                 border-style: solid;
                 border-width: 10px 15px;
                 border-color: transparent transparent $blue-bg transparent;
                 border-radius: 50%;
-                position: absolute;
                 right: 25px;
                 top: -17px;
                 z-index: -1;
@@ -628,6 +625,7 @@ ul{
         }
         .btn-direction--next{
             float: right;
+           
             @include btn-direction;
             i{
                 @include btn-direction-icon;
@@ -700,7 +698,7 @@ ul{
                         @include product-icon;
                         img{
                             @include product-icon-img;
-                        }                     
+                        }                 
                     }
                     .product-design-text{
                         @include mgleft-product-text;
@@ -767,8 +765,8 @@ ul{
         border: 1px solid gray;
         border-left-color: #fff;
         border-right-color: #fff;
-        transform:translateX(35px);
         margin-top: 7px;
+        transform:translateX(35px);
     }
     .product-list{
         @include display-flex-sb;
