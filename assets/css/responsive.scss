@@ -1,7 +1,7 @@
 @import "./variables" ;
 @import "./mixins";
 
-@media  (max-width: 767px){
+@media (min-width:481px) and (max-width: 767px){
     .container{
         width:100%;
         .header__contact-container{
@@ -183,7 +183,7 @@
                 margin-right: 10px;
             }
         }
-        &-intro{
+        .content__product-intro{
             margin: 40px 10px;
             // .option-intro{}
             .box-intro{
@@ -193,12 +193,15 @@
                     flex:none;
                     margin: auto;
                 }
-                &-info,&-review{
+                &-info{
                     margin-top: 20px;
                 }
                  p{
                     margin-top: 15px;
                     margin-right: 20px;
+                }
+                &-review{
+                    margin-top: 20px;
                 }
             }
         }
