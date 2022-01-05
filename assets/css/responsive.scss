@@ -405,6 +405,9 @@
                             // width: 30px;
                             // height: 30px;
                         }
+                        &-item:first-child i , &-item:last-child i{
+                            margin-top: 20px;
+                        }
                         &-item:nth-child(4)::before{
                             right: 10px;
                         }
