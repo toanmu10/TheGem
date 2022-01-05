@@ -360,6 +360,139 @@
   .container {
     width: 100%;
   }
+  .container .header__contact-container .header__contact-phone {
+    font-size: 10px;
+    margin: 0 10px;
+  }
+  .container .header__contact-container .header__contact-network {
+    font-size: 10px;
+    margin: 0 10px;
+  }
+  .container .header__contact-container .header__contact-network .network-menu {
+    display: block;
+    position: relative;
+  }
+  .container .header__contact-container .header__contact-network ul {
+    position: absolute;
+    display: none;
+    margin-top: 13px;
+    margin-left: -23px;
+    z-index: 1;
+  }
+  .container .header__contact-container .header__contact-network ul li {
+    padding: 10px 10px;
+  }
+  .container .header__contact-container .header__contact-network ul li:nth-child(odd) {
+    background-color: #f0f3f2;
+  }
+  .container .header__contact-container .header__contact-network ul li:nth-child(even) {
+    background-color: gray;
+  }
+  .container .header__contact-container .header__contact-options {
+    font-size: 10px;
+    margin: 0 10px;
+  }
+  .container .header__contact-container .header__contact-options .contact-menu {
+    display: block;
+    position: relative;
+  }
+  .container .header__contact-container .header__contact-options ul {
+    position: absolute;
+    display: none;
+    margin-top: 13px;
+    margin-left: -16px;
+    z-index: 1;
+  }
+  .container .header__contact-container .header__contact-options ul li {
+    padding: 10px 10px;
+  }
+  .container .header__contact-container .header__contact-options ul li:nth-child(odd) {
+    background-color: #f0f3f2;
+  }
+  .container .header__contact-container .header__contact-options ul li:nth-child(even) {
+    background-color: gray;
+  }
+  .container .header__menu-container .header__menu-logo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .container .header__menu-container .header__menu-nav {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .container .header__menu-container .header__menu-nav ul {
+    display: block;
+    padding-top: 0;
+    position: absolute;
+    margin-top: 41px;
+    width: 100%;
+    z-index: -1;
+  }
+  .container .header__menu-container .header__menu-nav ul li {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+  }
+  .container .header__menu-container .header__menu-nav ul li:nth-child(odd) {
+    background-color: gray;
+  }
+  .container .header__menu-container .header__menu-nav ul li:nth-child(even) {
+    background-color: #c0bdbd;
+  }
+  .container .header__menu-container .header__menu-nav .btn-menu {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  .container .header__menu-container .header__menu-other {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .container .header__menu-container .header__menu-other ul {
+    display: block;
+    padding-top: 0;
+    position: absolute;
+    margin-top: 25px;
+    width: 100%;
+    right: 0;
+    z-index: -2;
+  }
+  .container .header__menu-container .header__menu-other ul li {
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    background: gray;
+  }
+  .container .header__menu-container .header__menu-other ul li:nth-child(odd) {
+    background-color: gray;
+  }
+  .container .header__menu-container .header__menu-other ul li:nth-child(even) {
+    background-color: #c0bdbd;
+  }
+  .container .header__menu-container .header__menu-other ul li:last-child {
+    position: relative;
+    margin-right: auto;
+  }
+  .container .header__menu-container .header__menu-other ul .cart-notice {
+    padding: 1px 10px;
+    position: absolute;
+  }
+  .container .header__menu-container .header__menu-other .btn-other-menu {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    margin: 0 10px;
+  }
   .container .header__slider-title {
     line-height: 1;
   }

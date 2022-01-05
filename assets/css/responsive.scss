@@ -370,6 +370,145 @@
 @media (min-width: 320px) and (max-width: 480px){
     .container{
         width:100%;
+        .header__contact-container{
+            .header__contact{
+                &-phone{
+                    font-size: 10px ;
+                    margin: 0 10px;
+                }
+                &-network{
+                    font-size: 10px ;
+                    margin: 0 10px;
+                    .network-menu{
+                        display: block;
+                        position: relative;
+                    }
+                    ul{
+                        position:absolute;
+                        display: none;
+                        margin-top: 13px;
+                        margin-left: -23px;  
+                        z-index: 1;
+                        li{
+                            padding: 10px 10px;
+                        }
+                        li:nth-child(odd){
+                            background-color:$primary-bg;
+                        }
+                        li:nth-child(even){
+                            background-color:gray;
+                        }
+                    }
+                }
+                &-options {
+                    font-size: 10px ;
+                    margin: 0 10px;
+                    .contact-menu{
+                        display: block;
+                        position: relative;
+                    }
+                    ul{
+                        position:absolute;
+                        display: none;
+                        margin-top: 13px;
+                        margin-left: -16px;
+                        z-index: 1;
+                        li{
+                           padding: 10px 10px;
+                       }
+                       li:nth-child(odd){
+                            background-color:$primary-bg;
+                        }
+                        li:nth-child(even){
+                            background-color:gray;
+                        }
+    
+                    }
+                }
+            }
+        }
+        .header__menu-container{
+            .header__menu{
+    
+                &-logo{
+                    order: 2;
+                }
+            
+                &-nav{
+                    order: 1;
+                    ul{
+                        display: block;
+                        padding-top: 0;
+                        position: absolute;
+                        margin-top: 41px;
+                        width: 100%;
+                        z-index:-1;
+                        li{
+                            padding: 10px 15px;
+                            font-weight: bold;
+                            font-size: 14px;
+                            cursor: pointer;
+                            text-align: center;
+                            margin: 0;
+                        }
+                        li:nth-child(odd){
+                            background-color:gray;
+                        }
+                        li:nth-child(even){
+                            background-color:rgb(192, 189, 189);
+                        }
+                    }
+                    .btn-menu {
+                        display: block;
+                        position: relative;
+                        font-size: 16px;
+                        margin: 0 10px;
+                    }
+                }
+                &-other{
+                    order: 2;
+                    ul{
+                        display:block;
+                        padding-top: 0;
+                        position: absolute;     
+                        margin-top: 25px;
+                        width: 100%;
+                        right: 0;
+                        z-index: -2 ;
+                        li{
+                            padding: 10px 30px;
+                            font-weight: bold;
+                            font-size: 14px;
+                            cursor: pointer;
+                            text-align: center;
+                            margin: 0;
+                            background: gray;
+                        }
+                        li:nth-child(odd){
+                            background-color:gray;
+                        }
+                        li:nth-child(even){
+                            background-color:rgb(192, 189, 189);
+                        }
+                        li:last-child{
+                            position:relative;
+                            margin-right: auto;
+                        }
+                        .cart-notice{
+                            padding: 1px 10px;
+                            position: absolute;
+                        }
+                    }
+                    .btn-other-menu{
+                        display: block;
+                        position: relative;
+                        font-size: 16px;
+                        margin: 0 10px;
+                    }
+                    
+                }
+            }
+        }
         .header__slider{
             &-title {
                 line-height: 1;
