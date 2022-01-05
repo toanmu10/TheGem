@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gem</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- <link rel="stylesheet" href="./assets/css/responsive.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
     <div class="container">
@@ -17,12 +17,15 @@
 
             <!-- header contact -->
             <div class="header__contact-container">
-                <div class="header__contact">
+                <div class="header__contact mx-auto">
                     <div class="header__contact-phone">
                         <i class="fas fa-headphones-alt"></i><span> +84363041642</span> 
                     </div>
                     <div class="header__contact-network">
-                        <ul>
+                        <div class="network-menu">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <ul class="header__contact-network--ul">
                             <li><i class="fab fa-twitter"></i></li>
                             <li><i class="fab fa-facebook-f"></i></li>
                             <li><i class="fab fa-linkedin-in"></i></li>
@@ -31,16 +34,20 @@
                             <li><i class="fab fa-youtube"></i></li>
                             <li><i class="fab fa-pinterest-p"></i></li>
                         </ul>
+                        
                     </div>
                     <div class="header__contact-options">
-                        <ul>
+                        <div class="contact-menu">
+                            <i class="fas fa-id-card-alt"></i>
+                        </div>
+                        <ul class="header__contact-options--ul">
                             <li><i class="fas fa-chevron-right"></i><span>My Accout</span></li>
                             <li><i class="fas fa-chevron-right"></i><span>FAQ</span></li>
                             <li><i class="fas fa-chevron-right"></i><span>Contact Us</span></li>
                             <li><i class="fas fa-chevron-right"></i><span>Newsletter Signup</span></li>
                             <li><i class="fas fa-chevron-right"></i><span>Shipping Terms</span></li>
-                            
                         </ul>
+                        
                     </div>
                     <div>
                         <button class="btn-wishlist">My wishlist</button>
@@ -51,7 +58,7 @@
             <!-- header menu -->
             <div class="header__menu-container">
 
-                <div class="header__menu">
+                <div class="header__menu mx-auto">
                     <div class="header__menu-logo">
                         <img class="img-logo" src ="./assets/img/logo.png"><p>THEGEM</p>
                     </div>
@@ -77,9 +84,9 @@
                         <ul>
                             <li><img class="img-flag" src="./assets/img/flag.png" alt=""></li>
                             <li><i class="fas fa-search"></i></li>
-                            <li><i class="fas fa-shopping-cart"></i>    
+                            <li><i class="fas fa-shopping-cart"></i> 
+                            <span class="cart-notice">2</span>   
                             </li>
-                            <li class= "cart-notice">2</li>
                         </ul>
                     </div>
                 </div>
@@ -111,16 +118,16 @@
     
         <!-- content -->
         <div class="content">
-            <div class="content__product mg-top-100">
+            <div class="content__product mg-top-100 mx-auto">
                 <div class="content__product-info">
                     <div class="product-img">
-                        <div class="product-img--primary">   
+                        <div class="product-img--primary mx-auto">   
                             <div class="primary-button">
                                 <button class="btn btn-left"><i class="fas fa-chevron-left"></i></button>
                                 <button class="btn btn-right"><i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div>   
-                        <div class="product-img--extra mg-top-20">
+                        <div class="product-img--extra mg-top-20  mx-auto ">
                             <div class="product-img--extra-item"><i class="fas fa-chevron-left"></i></div>
                             <div class="product-img--extra-item"></div>
                             <div class="product-img--extra-item"></div>
@@ -243,7 +250,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content__product-intro mg-top-100">
+            <div class="content__product-intro mg-top-100 mx-auto">
                 <div class="option-intro uppercase-text">
                     <div class="option-intro-description">description</div>
                     <div class="option-intro-info">additional info</div>
@@ -266,9 +273,9 @@
 
                 </div>
             </div>
-            <div class="content-product-structure--fullwidth mg-top-100">
+            <div class="content-product-structure--fullwidth mg-top-100 ">
 
-                <div class="content-product-structure">
+                <div class="content-product-structure mx-auto">
                     <div class="product-name">
                         <div class="product-name-title">
                             <h1>Lorem ipsum  <span>dolor sit amet </span></h1>
@@ -283,7 +290,7 @@
                                 <div class="product-color-icon">
                                     <img src="./assets/img/color.png" alt="">
                                 </div>
-                                <div class="product-color-text">
+                                <div class="product-color-text mg-left-20">
                                     <div class="text-title uppercase-text">
                                         <span>unique</span><span>color</span>
                                     </div>
@@ -294,7 +301,7 @@
                                 <div class="product-design-icon">
                                     <img src="./assets/img/slide-logo.png" alt="">
                                 </div>
-                                <div class="product-design-text">
+                                <div class="product-design-text mg-left-20">
                                     <div class="text-title uppercase-text">
                                         <span>exclusive</span><span>design</span>
                                     </div>
@@ -305,7 +312,7 @@
                                 <div class="product-material-icon">
                                     <img src="./assets/img/material.png" alt="">
                                 </div>
-                                <div class="product-material-text">
+                                <div class="product-material-text mg-left-20">
                                     <div class="text-title uppercase-text">
                                         <span>natural</span><span>materials</span>
                                     </div>
@@ -316,7 +323,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-product--interested-in mg-top-100">
+            <div class="content-product--interested-in mg-top-100 mx-auto">
                 <div class="content-product--interested-in-title">
                     You may be interested in
                 </div>
@@ -361,7 +368,7 @@
         <!-- footer -->
         <footer>
 
-            <div class="footer mg-top-100">
+            <div class="footer mg-top-100 mx-auto">
                 <div class="footer__copyright">
                     <i class="far fa-copyright"></i> Copyright 2019
                     <span>Codex Themes</span>
@@ -412,6 +419,37 @@
             else{
                 header_menu_other.classList.add('active');
 
+            }
+        }
+
+        var network_menu = document.querySelector('.network-menu ')
+        var contact_menu = document.querySelector('.contact-menu ')
+        var network_block = document.querySelector('.header__contact-network--ul')
+        var contact_block = document.querySelector('.header__contact-options--ul')
+
+
+        network_menu.onclick = function(){
+            if(network_block.classList.contains('block')){
+                network_block.classList.remove('block') ;
+                network_block.style.display = 'none';
+            }
+            else{
+                network_block.classList.add('block') ;
+                network_block.style.display = 'block';
+
+
+
+            }
+        } 
+        contact_menu.onclick = function(){
+            if(contact_block.classList.contains('block')){
+                contact_block.classList.remove('block');
+                contact_block.style.display = 'none';
+
+            }
+            else{
+                contact_block.classList.add('block');
+                contact_block.style.display = 'block';
             }
         }
 

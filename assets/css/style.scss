@@ -17,6 +17,9 @@ html{
 .active{
     z-index: 1;
 }
+.block{
+    display: block;
+}
 
 ul{
     list-style-type: none;
@@ -28,6 +31,13 @@ ul{
 }
 .mg-top-20{
     margin-top: 20px;
+}
+.mg-left-20{
+    margin-left: 20px;
+}
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn{
     font-size: 14px;
@@ -52,10 +62,10 @@ ul{
         padding: 8px 0;
         max-width: 1170px;
         width:inherit;
-        @include mg-lr-auto;
-        .header__contact-network{
+        &-network{
             ul{
                 @include display-flex-sb;
+                opacity: 1;
                 li{
                     @include display-flex-sb;
                     flex-direction: row;
@@ -67,10 +77,14 @@ ul{
                     color: red;
                 }
             }
+            .network-menu{
+                display:none;
+            }
         }
-        .header__contact-options{
+        &-options{
             ul{
                 @include display-flex-sb;
+                opacity: 1;
                 li{
                     @include display-flex-sb;
                     flex-direction: row;
@@ -84,6 +98,9 @@ ul{
                         transform: translateY(17%);
                     }
                 }
+            }
+            .contact-menu{
+                display: none;
             }
         }
         .btn-wishlist{
@@ -108,9 +125,8 @@ ul{
         align-items: center;
         width: inherit;
         max-width:1170px;
-        @include mg-lr-auto;
         flex-wrap: wrap;
-        .header__menu-logo{
+        &-logo{
             display: flex;
             justify-content:space-around;
             cursor: pointer;
@@ -120,7 +136,7 @@ ul{
                 margin : 16px 0 0 5px;
             }
         }
-        .header__menu-nav{
+        &-nav{
             ul{
                 @include display-flex-sb;
                 padding-top: 14px;
@@ -144,7 +160,7 @@ ul{
                 }
             }
         }
-        .header__menu-other{
+        &-other{
             ul{
                 @include display-flex-sb;
                 padding-top: 14px;
@@ -154,17 +170,19 @@ ul{
                     font-size: $fs-13;
                     cursor: pointer;
                 }
-                li:nth-child(3){
+                li:last-child{
+                    position:relative;
                     margin-right: -5px;
                 }
+                .cart-notice{
+                    padding: 1px 10px;
+                    // transform: translateY(-38px);
+                    // right: 0;
+                    // margin-right: 325px;
+                    background-color: $blue-bg ;
+                    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+                }
             }
-            .cart-notice{
-                padding: 0px 10px ;
-                background: $blue-bg;
-                font-size: 10px;
-                clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-                margin: 10px 0 10px 15px;
-            } 
         }
     }
 }
@@ -175,13 +193,13 @@ ul{
     height:400px;
     width: 100%;
     text-align: center;
-    .header__slider-logo{
+    &-logo{
         .img-bg{
             margin-top: 5%;
             position: relative;
         }
     }
-    .header__slider-title{
+    &-title{
         margin-top: 30px;
         font-size:35px;
         color: #fff;
@@ -197,13 +215,13 @@ ul{
             color: $normal-text;
         }
     }
-    .header__slider-description{
+    &-description{
         margin-top: 50px;
         color: $normal-text;
         font-size:20px;
         font-weight: 100;
     }
-    .header__slider-tab{
+    &-tab{
         ul{
             display: flex;
             justify-content: center;
@@ -233,15 +251,14 @@ ul{
 //content product
 .content__product{
     @include display-flex-sb;
-    @include mg-lr-auto;
     width: 100%;
     max-width: 1170px;
     .product-img{
 
-        .product-img--primary{
+        &--primary{
             background-color: $primary-bg;
             position:relative;
-            margin-right: 10px;
+            // margin-right: 10px;
             width: 625px;
             height: 700px;
             z-index: -1;
@@ -261,10 +278,9 @@ ul{
                 }
             }
         }
-        .product-img--extra{
+        &--extra{
             @include display-flex-sb;
-            margin-right: 10px;
-            .product-img--extra-item{
+            &-item{
                 width:80px;
                 height: 80px;
                 background-color: #d4d8da;
@@ -274,22 +290,22 @@ ul{
                     font-size: 16px;
                 }
             }
-            .product-img--extra-item:first-child{
+            &-item:first-child{
                 background-color:$primary-bg;
                 cursor: pointer;
             }
-            .product-img--extra-item:last-child{
+            &-item:last-child{
                 background-color:$primary-bg;
                 cursor: pointer;
             }
-            .product-img--extra-item:nth-child(3){
+            &-item:nth-child(3){
                 background-color:gray
             }
-            .product-img--extra-item:nth-child(4){
+            &-item:nth-child(4){
                 background-color:$blue-bg;
                 position: relative;
             }
-            .product-img--extra-item:nth-child(4)::before{
+            &-item:nth-child(4)::before{
                 @include pseudo;
                 border-style: solid;
                 border-width: 10px 15px;
@@ -303,9 +319,9 @@ ul{
     }
     .product-contact{
         margin-top : 80px;
-        .product-contact-network{
+        &-network{
             ul{
-                @include display-flex-fs;
+                display:flex;
                 li{
                     margin: 0 10px 0 5px;
                     font-size: 14px;
@@ -314,7 +330,7 @@ ul{
                 }
             }
         }
-        .product-contact-description{
+        &-description{
             margin-top:40px;
             color: $normal-text;
             font-size: 11px;
@@ -338,7 +354,7 @@ ul{
         .tag{
             margin-top: 10px;
             ul{
-                @include display-flex-fs;
+                display:flex;
                 li{
                     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
                     background-color:rgb(211, 211, 211);
@@ -362,7 +378,7 @@ ul{
     .content__product-description{
         margin-left: 30px;
         .product-title{
-            .product-title-head{
+            &-head{
                 @include display-flex-sb;
                 h1{
                     font-size: 40px;
@@ -376,7 +392,7 @@ ul{
                 }
             }
             ul{
-                @include display-flex-fs;
+                display:flex;
                 margin-top: 30px;
                 padding-bottom: 25px;
                 border-bottom-style: double;
@@ -398,8 +414,8 @@ ul{
         }
         .product-body{
             margin-top:60px;
-            .product-body-price{
-                @include display-flex-fs;
+            &-price{
+                display:flex;
                 .old-price{
                     margin-right: 30px;
                     color:$normal-text;
@@ -425,7 +441,7 @@ ul{
                     }
                 }
             }
-            .product-body-detail{
+            &-detail{
                 margin-top:40px;
                 color: $normal-text;
                 font-size:16px;
@@ -443,7 +459,7 @@ ul{
         }
         .product-selection{
             margin-top:40px;
-            .product-selection-size{
+            &-size{
                 label{
                     font-size:16px;
                 }
@@ -453,7 +469,7 @@ ul{
                     color: $normal-text;
                 }
             }
-            .product-selection-color{
+            &-color{
                 margin-top: 10px;
                 label{
                     font-size:16px;
@@ -478,9 +494,9 @@ ul{
         }
         .product-cart{
             margin-top:80px;
-            .product-cart-price{
+            &-price{
                 ul{
-                    @include display-flex-fs;
+                    display:flex;
                     li{
                         margin-right: 15px;
                     }
@@ -535,10 +551,9 @@ ul{
 //den 557 css
 .content__product-intro{
     max-width: 1170px;
-    @include mg-lr-auto;
     .option-intro{
-        @include display-flex-fs;
-        .option-intro-description ,.option-intro-info,.option-intro-review{
+        display:flex;
+        &-description ,&-info,&-review{
             padding: 10px 20px;
             font-size:$fs-13;
             background-color: $primary-bg;
@@ -546,14 +561,14 @@ ul{
             border-radius: 1px ;
             color: $normal-text;
         }
-        .option-intro-description:hover,.option-intro-info:hover,.option-intro-review:hover{
+        &-description:hover,&info:hover,&review:hover{
             background-color:#fff;
             font-weight:bold;
             border: 1px solid black;
             cursor: pointer;
             color: black;
         }
-        .option-intro-review span{
+        &-review span{
             color: red;
         }
     }
@@ -576,12 +591,12 @@ ul{
                 transform: translateX(68%);
             }
         }
-        .box-intro-info{
+        &-info{
             flex:2;
             margin-left: 40px;
             color: var(--normal-color);
         }
-        .box-intro-review{
+        &-review{
             flex: 1;
             margin-left: 40px;
             li{
@@ -617,13 +632,13 @@ ul{
         }
     }
     .btn-direction{
-        .btn-direction--pre{
+        &--pre{
             @include btn-direction;
             i{
                 @include btn-direction-icon;
             }
         }
-        .btn-direction--next{
+        &--next{
             float: right;
            
             @include btn-direction;
@@ -639,11 +654,10 @@ ul{
     margin-top: 80px;
     .content-product-structure{
         max-width: 1170px;
-        @include mg-lr-auto;
         .product-name{
             background-color: $primary-bg;
             text-align: center;
-            .product-name-title{
+            &-title{
                 padding-top:100px;
                 font-size: 20px;
                 text-transform: uppercase;
@@ -654,7 +668,7 @@ ul{
                     letter-spacing:1px;
                 }
             }
-            .product-name-description{
+            &-description{
                 margin-top: 40px;
                 padding-bottom: 100px;
                 font-size: 14px;
@@ -664,10 +678,11 @@ ul{
             position: relative;
             height:600px;
             width: 100%;
-            background-image: url(../img/bg.png) ;
+            background: url(../img/bg.png) ;
             background-position-x: center;
             background-size: cover;
-            .product-structure-detail{
+            background-repeat: no-repeat;
+            &-detail{
                 top: 0;
                 right: 0;
                 transform: translateX(-16%);
@@ -677,15 +692,14 @@ ul{
                 .product-color{
                     @include display-flex-sb;
                     margin-top:60px;
-                    .product-color-icon{
+                    &-icon{
                         @include product-icon;
                         img{
                             @include product-icon-img;
                         }
                     }
-                    .product-color-text{
+                    &-text{
                         @include text-title;
-                        @include mgleft-product-text;
                         p{
                             @include product-text-p;
                         }
@@ -694,14 +708,13 @@ ul{
                 .product-design{
                     @include display-flex-sb;
                     margin-top: 60px;
-                    .product-design-icon{
+                    &-icon{
                         @include product-icon;
                         img{
                             @include product-icon-img;
                         }                 
                     }
-                    .product-design-text{
-                        @include mgleft-product-text;
+                    &-text{
                         @include text-title;
                         p{
                             @include product-text-p;
@@ -711,14 +724,13 @@ ul{
                 .product-material{
                     @include display-flex-sb;
                     margin-top: 60px;
-                    .product-material-icon{
+                    &-icon{
                         @include product-icon;
                         img{
                             @include product-icon-img;
                         }
                     }
-                    .product-material-text{
-                        @include mgleft-product-text;
+                    &-text{
                         @include text-title;
                         p{
                             @include product-text-p;
@@ -740,15 +752,14 @@ ul{
 }
 .content-product--interested-in{
     width:1170px;
-    @include mg-lr-auto;
-    .content-product--interested-in-title{
+    &-title{
         text-transform:uppercase;
         letter-spacing:2px;
         font-size: 24px;
         text-align: center;
         position: relative;
     }
-    .content-product--interested-in-title::before{
+    &-title::before{
         @include pseudo;
         width: 350px;
         height:1px;
@@ -758,7 +769,7 @@ ul{
         transform:translateX(-395px);
         margin-top: 7px;
     }
-    .content-product--interested-in-title::after{
+    &-title::after{
         @include pseudo;
         width: 350px;
         height:1px;
@@ -771,7 +782,7 @@ ul{
     .product-list{
         @include display-flex-sb;
         margin-top:100px;
-        .product-list-item{
+        &-item{
             .img{
                 width:160px;
                 height: 200px;
@@ -824,18 +835,17 @@ footer{
     .footer{
         max-width: 1170px;
         width: inherit;
-        @include mg-lr-auto;
         @include display-flex-sb;
         font-size: $fs-13;
         padding: 40px 2px;
-        .footer__copyright{
+        &__copyright{
             text-align:center;  
             span{
                 color: $text-color;
                 cursor: pointer;
             } 
         }
-        .footer__help{
+        &__help{
             ul{
                 @include display-flex-sb;
                 margin-right: 10px;
@@ -853,9 +863,10 @@ footer{
                 }
             }
         }
-        .footer__social-network{
+        &__social-network{
             ul{
                 @include display-flex-sb;
+                flex-wrap: wrap;    
                 margin-right: 10px;
                 li{
                     i{
@@ -870,3 +881,5 @@ footer{
         }
     }
 }
+
+

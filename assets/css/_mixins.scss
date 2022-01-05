@@ -1,21 +1,8 @@
 
-@mixin btn{
-    font-size: 14px;
-    padding: 15px 20px;
-}
-@mixin mg-lr-auto{
-    margin-left: auto;
-    margin-right: auto;
-}
 @mixin display-flex-sb{
     display: flex;
     justify-content:space-between;
 }
-@mixin display-flex-fs{
-    display: flex;
-    justify-content:flex-start;
-}
-
 @mixin btn-lr{
     background-color:gray;
     position: absolute;
@@ -78,6 +65,9 @@
         }
     }
 }
-@mixin mgleft-product-text{
-    margin-left: 20px;
+@mixin btn-menu-res{
+    display:block;
+    position: relative;
+    font-size: 16px;
+    margin: 0 10px;
 }
