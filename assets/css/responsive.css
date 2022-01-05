@@ -386,12 +386,15 @@
   }
   .container .content__product-info .product-img--primary {
     width: 85%;
+    height: 450px;
   }
   .container .content__product-info .product-img--extra-item {
     margin: 0 10px;
+    width: 50px;
+    height: 50px;
   }
   .container .content__product-info .product-img--extra-item:nth-child(4)::before {
-    right: 3px;
+    right: 10px;
   }
   .container .content__product-info .product-contact-network ul {
     display: -webkit-box;
