@@ -121,6 +121,12 @@
   .container .header__menu-container .header__menu-other ul li:nth-child(even) {
     background-color: #c0bdbd;
   }
+  .container .header__menu-container .header__menu-other ul li :nth-child(odd) {
+    background-color: gray;
+  }
+  .container .header__menu-container .header__menu-other ul li:nth-child(even) {
+    background-color: #c0bdbd;
+  }
   .container .header__menu-container .header__menu-other ul li:last-child {
     position: relative;
     margin-right: auto;
@@ -767,4 +773,3 @@
   }
 }
 /*# sourceMappingURL=responsive.css.map */
-

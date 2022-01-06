@@ -72,10 +72,11 @@ ul{
                     margin: 0 10px;
                     cursor: pointer;
                     font-size: $fs-13;
+                    &:nth-child(6){
+                        color: red;
+                    }
                 }
-                li:nth-child(6){
-                    color: red;
-                }
+                
             }
             .network-menu{
                 display:none;
@@ -145,19 +146,19 @@ ul{
                     font-weight: bold;
                     font-size: $fs-13;
                     cursor: pointer;
-                }
-                li:first-child{
-                    position: relative;
-                }
-                li:nth-child(5){
-                    border: 3px solid #000;
-                    padding: 5px 15px;
-                    margin-top: 0;
-                }
-                li:hover{
-                    color: $text-color;
-                    cursor: pointer;
-                }
+                    &:first-child{
+                        position: relative;
+                    }
+                    &:nth-child(5){
+                        border: 3px solid #000;
+                        padding: 5px 15px;
+                        margin-top: 0;
+                    }
+                    &:hover{
+                        color: $text-color;
+                        cursor: pointer;
+                    }
+                }            
             }
         }
         &-other{
@@ -169,10 +170,10 @@ ul{
                     font-weight: bold;
                     font-size: $fs-13;
                     cursor: pointer;
-                }
-                li:last-child{
-                    position:relative;
-                    margin-right: -5px;
+                    &:last-child{
+                        position:relative;
+                        margin-right: -5px;
+                    }
                 }
                 .cart-notice{
                     padding: 1px 10px;
@@ -230,20 +231,21 @@ ul{
             width: 100%;
             li{
                 margin-right: 20px;
+                &:nth-child(odd){
+                    color: $text-color;
+                    cursor: pointer;
+    
+                }
+                &:nth-child(even){
+                    color: $normal-text;
+                }
+                &:last-child{
+                    color: #fff ;
+                    border-bottom: 5px solid #ff5252;
+                    padding-bottom:15px;
+                }
             }
-            li:nth-child(odd){
-                color: $text-color;
-                cursor: pointer;
-
-            }
-            li:nth-child(even){
-                color: $normal-text;
-            }
-            li:last-child{
-                color: #fff ;
-                border-bottom: 5px solid #ff5252;
-                padding-bottom:15px;
-            }
+            
         }
     }
 }
@@ -265,17 +267,19 @@ ul{
             .primary-button{
                 .btn-left{
                     @include btn-lr;
+                    &:hover{
+                        background-color: $blue-bg;
+                    }
                 }
-                .btn-left:hover{
-                    background-color: $blue-bg;
-                }
+                
                 .btn-right{
                     @include btn-lr;
                     right:0;
+                    &:hover{
+                        background-color: $blue-bg;
+                    }
                 }
-                .btn-right:hover{
-                    background-color: $blue-bg;
-                }
+                
             }
         }
         &--extra{
@@ -289,32 +293,33 @@ ul{
                     margin-top: 35px;
                     font-size: 16px;
                 }
+                &:first-child{
+                    background-color:$primary-bg;
+                    cursor: pointer;
+                }
+                &:last-child{
+                    background-color:$primary-bg;
+                    cursor: pointer;
+                }
+                &:nth-child(3){
+                    background-color:gray
+                }
+                &:nth-child(4){
+                    background-color:$blue-bg;
+                    position: relative;
+                }
+                &:nth-child(4)::before{
+                    @include pseudo;
+                    border-style: solid;
+                    border-width: 10px 15px;
+                    border-color: transparent transparent $blue-bg transparent;
+                    border-radius: 50%;
+                    right: 25px;
+                    top: -17px;
+                    z-index: -1;
+                }
             }
-            &-item:first-child{
-                background-color:$primary-bg;
-                cursor: pointer;
-            }
-            &-item:last-child{
-                background-color:$primary-bg;
-                cursor: pointer;
-            }
-            &-item:nth-child(3){
-                background-color:gray
-            }
-            &-item:nth-child(4){
-                background-color:$blue-bg;
-                position: relative;
-            }
-            &-item:nth-child(4)::before{
-                @include pseudo;
-                border-style: solid;
-                border-width: 10px 15px;
-                border-color: transparent transparent $blue-bg transparent;
-                border-radius: 50%;
-                right: 25px;
-                top: -17px;
-                z-index: -1;
-            }
+            
         }
     }
     .product-contact{
@@ -400,16 +405,17 @@ ul{
                     font-size: 20px;
                     margin-right: 5px;
                     color:$gold-color ;
+                    &:nth-child(5){
+                        color: $normal-text;
+                    }
+                    &:last-child{
+                        color: $text-color;
+                        font-size: $fs-13;
+                        padding-top: 3px;
+                        margin-left: 15px;
+                    }
                 }
-                li:nth-child(5){
-                    color: $normal-text;
-                }
-                li:last-child{
-                    color: $text-color;
-                    font-size: $fs-13;
-                    padding-top: 3px;
-                    margin-left: 15px;
-                }
+                
             }
         }
         .product-body{
@@ -499,20 +505,21 @@ ul{
                     display:flex;
                     li{
                         margin-right: 15px;
+                        &:first-child{
+                            font-size:25px;
+                            text-decoration: line-through;
+                            color: $normal-text;
+                        }
+                        &:nth-child(2){
+                            font-size:35px;
+                            color: black;
+                        }
+                        &:last-child{
+                            font-size: 18px;
+                            color: $normal-text;
+                        }
                     }
-                    li:first-child{
-                        font-size:25px;
-                        text-decoration: line-through;
-                        color: $normal-text;
-                    }
-                    li:nth-child(2){
-                        font-size:35px;
-                        color: black;
-                    }
-                    li:last-child{
-                        font-size: 18px;
-                        color: $normal-text;
-                    }
+                    
                 }
             }
             .cart-button{
@@ -603,32 +610,34 @@ ul{
                 @include display-flex-sb;
                 border: 1px solid rgb(163, 161, 161);
                 padding: 14px 10px;
+                &:first-child{
+                    color: #b67ceb;
+                }
+                &:nth-child(2){
+                    color: #8a9aeb;
+                }
+                &:last-child{
+                    color: #00bcd4;
+                }
             }
-            li:first-child{
-                color: #b67ceb;
-            }
-            li:nth-child(2){
-                color: #8a9aeb;
-            }
-            li:last-child{
-                color: #00bcd4;
-            }
+            
             span{
                 font-size: 30px;
                 padding: 5px 20px;
                 border-radius: 50%;
                 border: 1px solid #dcc1f6;
                 margin-right: 10px;
+                &:first-child{
+                    border: 2px solid #b67ceb;
+                }
+                &:nth-child(2){
+                    border: 2px solid #8a9aeb;
+                }
+                &:last-child{
+                    border: 2px solid #00bcd4;
+                }
             }
-            span:first-child{
-                border: 2px solid #b67ceb;
-            }
-            span:nth-child(2){
-                border: 2px solid #8a9aeb;
-            }
-            span:last-child{
-                border: 2px solid #00bcd4;
-            }
+            
         }
     }
     .btn-direction{
@@ -853,14 +862,15 @@ footer{
                     margin-right: 30px;
                     position: relative;
                     cursor: pointer;
+                    &:not(:last-child)::after{
+                        @include pseudo ;
+                        width:1px;
+                        height:15px;
+                        background-color:gray;
+                        transform:translateX(15px);
+                    }
                 }
-                li:not(:last-child)::after{
-                    @include pseudo ;
-                    width:1px;
-                    height:15px;
-                    background-color:gray;
-                    transform:translateX(15px);
-                }
+                
             }
         }
         &__social-network{
@@ -873,10 +883,11 @@ footer{
                         font-size: 14px;
                         cursor: pointer;
                     }
+                    &:not(:last-child){
+                        margin-right: 15px;
+                    }
                 }
-                li:not(:last-child){
-                    margin-right: 15px;
-                }
+                
             }
         }
     }

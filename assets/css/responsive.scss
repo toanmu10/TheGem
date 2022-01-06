@@ -25,13 +25,14 @@
                         z-index: 1;
                         li{
                             padding: 10px 10px;
+                            &:nth-child(odd){
+                                background-color:$primary-bg;
+                            }
+                            &:nth-child(even){
+                                background-color:gray;
+                            }
                         }
-                        li:nth-child(odd){
-                            background-color:$primary-bg;
-                        }
-                        li:nth-child(even){
-                            background-color:gray;
-                        }
+                        
                     }
                 }
                 &-options {
@@ -49,25 +50,22 @@
                         z-index: 1;
                         li{
                            padding: 10px 10px;
-                       }
-                       li:nth-child(odd){
+                        &:nth-child(odd){
                             background-color:$primary-bg;
                         }
-                        li:nth-child(even){
+                        &:nth-child(even){
                             background-color:gray;
                         }
-    
+                       }
                     }
                 }
             }
         }
         .header__menu-container{
             .header__menu{
-    
                 &-logo{
                     order: 2;
                 }
-            
                 &-nav{
                     order: 1;
                     ul{
@@ -84,13 +82,13 @@
                             cursor: pointer;
                             text-align: center;
                             margin: 0;
-                        }
-                        li:nth-child(odd){
-                            background-color:gray;
-                        }
-                        li:nth-child(even){
-                            background-color:rgb(192, 189, 189);
-                        }
+                            &:nth-child(odd){
+                                background-color:gray;
+                            }
+                            &:nth-child(even){
+                                background-color:rgb(192, 189, 189);
+                            }
+                        }          
                     }
                     .btn-menu {
                         display: block;
@@ -117,17 +115,22 @@
                             text-align: center;
                             margin: 0;
                             background: gray;
-                        }
-                        li:nth-child(odd){
-                            background-color:gray;
-                        }
-                        li:nth-child(even){
-                            background-color:rgb(192, 189, 189);
-                        }
-                        li:last-child{
-                            position:relative;
-                            margin-right: auto;
-                        }
+                            &:nth-child(odd){
+                                background-color:gray;
+                            }
+                            &:nth-child(even){
+                                background-color:rgb(192, 189, 189);
+                            }:nth-child(odd){
+                                background-color:gray;
+                            }
+                            &:nth-child(even){
+                                background-color:rgb(192, 189, 189);
+                            }
+                            &:last-child{
+                                position:relative;
+                                margin-right: auto;
+                            }
+                        } 
                         .cart-notice{
                             padding: 1px 10px;
                             position: absolute;
@@ -391,13 +394,13 @@
                         z-index: 1;
                         li{
                             padding: 10px 10px;
-                        }
-                        li:nth-child(odd){
-                            background-color:$primary-bg;
-                        }
-                        li:nth-child(even){
-                            background-color:gray;
-                        }
+                            &:nth-child(odd){
+                                background-color:$primary-bg;
+                            }
+                            &:nth-child(even){
+                                background-color:gray;
+                            }
+                        }           
                     }
                 }
                 &-options {
@@ -415,14 +418,13 @@
                         z-index: 1;
                         li{
                            padding: 10px 10px;
-                       }
-                       li:nth-child(odd){
+                           &:nth-child(odd){
                             background-color:$primary-bg;
-                        }
-                        li:nth-child(even){
+                            }
+                            &:nth-child(even){
                             background-color:gray;
                         }
-    
+                       }
                     }
                 }
             }
@@ -450,13 +452,13 @@
                             cursor: pointer;
                             text-align: center;
                             margin: 0;
-                        }
-                        li:nth-child(odd){
-                            background-color:gray;
-                        }
-                        li:nth-child(even){
-                            background-color:rgb(192, 189, 189);
-                        }
+                            &:nth-child(odd){
+                                background-color:gray;
+                            }
+                            &:nth-child(even){
+                                background-color:rgb(192, 189, 189);
+                            }
+                        }              
                     }
                     .btn-menu {
                         display: block;
@@ -483,17 +485,17 @@
                             text-align: center;
                             margin: 0;
                             background: gray;
-                        }
-                        li:nth-child(odd){
-                            background-color:gray;
-                        }
-                        li:nth-child(even){
-                            background-color:rgb(192, 189, 189);
-                        }
-                        li:last-child{
-                            position:relative;
-                            margin-right: auto;
-                        }
+                            &:nth-child(odd){
+                                background-color:gray;
+                            }
+                            &:nth-child(even){
+                                background-color:rgb(192, 189, 189);
+                            }
+                            &:last-child{
+                                position:relative;
+                                margin-right: auto;
+                            }
+                        }                 
                         .cart-notice{
                             padding: 1px 10px;
                             position: absolute;
@@ -504,8 +506,7 @@
                         position: relative;
                         font-size: 16px;
                         margin: 0 10px;
-                    }
-                    
+                    }     
                 }
             }
         }
@@ -781,10 +782,11 @@
                     flex-wrap: wrap;
                     li{
                         text-decoration: underline;
+                        &:not(:last-child)::after {
+                            display: none;
+                        }
                     }
-                    li:not(:last-child)::after {
-                        display: none;
-                    }
+                    
                 }
             }
             &__social-network{
